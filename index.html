@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>문송하지만, 이번 겨울 취업은 하고 싶어</title>
+<meta name="description" content="광주 지역 인문·사회계열 졸업 청년을 위한 겨울 취업 프로젝트. 2026. 11. 16. ~ 12. 4. 모집">
+<meta property="og:title" content="문송하지만, 이번 겨울 취업은 하고 싶어!">
+<meta property="og:description" content="광주 지역 취업에 진심인 청년 5명을 찾습니다.">
+<meta property="og:image" content="images/jumper.jpg">
+<style>
+@font-face{font-family:"Pretendard";src:url(fonts/Pretendard-subset.woff2) format("woff2-variations");font-weight:45 920;font-display:swap}
+@font-face{font-family:"KimWildgag";src:url(fonts/KimWildgag-Bold-subset.woff2) format("woff2");font-weight:700;font-display:swap}
+/* Layout: one narrow poster-like column (like a recruiting post), teal poster hero → label/bullet info rows → benefit grid → dark footer */
+:root{
+  --teal:#54817a;      /* poster background */
+  --teal-deep:#2e4c47; /* headings on light, footer */
+  --yellow:#f3cd5d;    /* poster highlight */
+  --cream:#f7f0e2;     /* poster lettering */
+  --paper:#fffdf8;
+  --ink:#1f2a28;
+  --muted:#5d6b68;
+  --line:#d9dfdc;
+  --tint:#eef3f1;
+  --display:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --headline:"KimWildgag","Pretendard",system-ui,sans-serif;
+  --body:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%;height:auto}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.7;word-break:keep-all}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+
+/* top rule */
+.topbar{background:var(--teal);color:var(--cream)}
+.topbar .wrap{padding-block:22px 0}
+.rule{display:flex;align-items:center;gap:0;margin-top:10px}
+.rule::before{content:"";flex:1;height:1.5px;background:currentColor;opacity:.8}
+.rule::after{content:"";width:9px;height:9px;border-radius:50%;background:currentColor}
+.eyebrow{font-weight:700;font-size:15px;letter-spacing:.06em}
+
+/* hero */
+.hero{background:var(--teal);color:var(--cream);overflow:hidden}
+.hero .wrap{padding-block:40px 0}
+.hero .kicker{font-family:var(--headline);font-weight:700;color:var(--yellow);font-size:clamp(26px,6vw,40px);line-height:1.1}
+.hero h1{font-family:var(--headline);font-weight:700;font-size:clamp(32px,10.4vw,78px);line-height:1.12;white-space:nowrap;letter-spacing:-.01em;margin-top:6px}
+.hero h1 .hl{color:var(--yellow)}
+.pill{display:inline-block;margin-top:22px;background:var(--yellow);color:var(--teal-deep);font-weight:700;font-size:clamp(15px,3.6vw,19px);padding:6px 18px;border-radius:999px}
+.jumper{display:block;width:min(100%,560px);margin:12px auto 0;max-width:100%}
+.roofs{display:block;width:100%;max-width:100%;margin-top:-30px}
+.lead{background:var(--paper)}
+.lead .wrap{padding-block:40px 44px}
+.lead h2{font-size:clamp(21px,4.6vw,26px);font-weight:700}
+.lead h2 em{font-style:normal;color:var(--teal);box-shadow:inset 0 -.38em 0 color-mix(in srgb,var(--yellow) 70%,transparent)}
+.lead p{color:var(--muted);margin-top:8px}
+
+.band{height:20px;background:var(--tint)}
+
+/* sections */
+section.block .wrap{padding-block:48px}
+.sec-title{font-family:var(--display);font-weight:800;font-size:clamp(28px,6.4vw,36px);line-height:1.25;letter-spacing:-.02em;color:var(--ink)}
+.sec-title small{display:block;font-family:var(--body);font-size:15px;font-weight:700;color:var(--teal);letter-spacing:.04em;margin-bottom:4px}
+.dark-rule{color:var(--ink)}
+.dark-rule .rule::before{opacity:1}
+
+.who{display:grid;gap:12px;margin-top:22px}
+.who li{display:flex;gap:12px;align-items:flex-start;background:var(--tint);border-radius:12px;padding:14px 16px}
+.who li svg{flex:none;margin-top:4px}
+.who li b{color:var(--teal-deep)}
+
+/* steps: real sequence, narrowing funnel 50 → 20 → 5 */
+.steps{display:grid;gap:0;margin-top:26px}
+.step{display:grid;grid-template-columns:96px 1fr;gap:18px;padding-block:22px;border-top:1px solid var(--line)}
+.step:last-child{border-bottom:1px solid var(--line)}
+.step-no{font-family:var(--display);font-weight:700;color:var(--teal);font-size:17px;line-height:1.2}
+.step-no strong{display:block;font-family:var(--display);font-weight:800;font-size:44px;color:var(--teal-deep);line-height:1}
+.step-no span{display:block;font-family:var(--body);font-size:13px;color:var(--muted);margin-top:4px}
+.step h3{font-size:19px;font-weight:700;color:var(--teal);margin-bottom:6px}
+.step ul li{position:relative;padding-left:16px;color:var(--ink)}
+.step ul li::before{content:"";position:absolute;left:2px;top:.75em;width:5px;height:5px;border-radius:50%;background:var(--muted)}
+.reward{display:inline-block;margin-top:10px;background:var(--yellow);color:var(--teal-deep);font-weight:700;font-size:14px;padding:3px 12px;border-radius:6px}
+.funnel{display:flex;align-items:flex-end;gap:6px;margin-top:6px}
+.funnel i{display:block;height:6px;border-radius:3px;background:var(--teal)}
+
+/* label / bullet rows (as in a job post) */
+.rows{display:grid;gap:0;margin-top:22px}
+.row{display:grid;grid-template-columns:110px 1fr;gap:16px;padding-block:13px}
+.row dt{font-weight:700;color:var(--ink)}
+.row dd{margin:0;min-width:0;position:relative;padding-left:16px;overflow-wrap:anywhere}
+.row dd::before{content:"";position:absolute;left:2px;top:.75em;width:5px;height:5px;border-radius:50%;background:var(--muted)}
+.row dd strong{color:var(--teal-deep)}
+.copy{font:inherit;font-size:13px;color:var(--teal-deep);background:var(--tint);border:1px solid var(--line);border-radius:6px;padding:1px 9px;margin-left:6px;cursor:pointer}
+.copy:focus-visible,.cta:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.note{margin-top:18px;font-size:14px;color:var(--muted);background:var(--tint);border-radius:10px;padding:12px 14px}
+
+/* benefits grid */
+.perks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 20px;margin-top:30px;text-align:center}
+.perk{display:flex;flex-direction:column;align-items:center;gap:8px}
+.perk .ic{width:78px;height:78px;border-radius:50%;background:var(--tint);display:grid;place-items:center}
+.perk h3{font-size:18px;font-weight:700;margin-top:6px}
+.perk p{font-size:14.5px;color:var(--muted);line-height:1.6}
+.perk .big{font-family:var(--display);font-weight:800;color:var(--teal);font-size:22px}
+
+.cta-box{text-align:center;padding-block:10px 0}
+.cta{display:inline-block;margin-top:8px;background:var(--teal-deep);color:var(--cream);font-weight:700;font-size:18px;padding:16px 34px;border-radius:999px;text-decoration:none}
+.cta[aria-disabled="true"]{opacity:.85;cursor:default}
+.cta-sub{display:block;font-size:13px;color:var(--muted);margin-top:10px}
+
+footer{background:#1f2a28;color:#cfd8d5;font-size:14.5px}
+footer .wrap{padding-block:30px}
+footer .sep{opacity:.4;margin-inline:8px}
+footer b{color:#fff}
+
+@media (max-width:560px){
+  .perks{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .perks .perk:last-child{grid-column:1 / -1}
+  .step{grid-template-columns:1fr;gap:8px}
+  .step-no{display:flex;align-items:baseline;gap:10px}
+  .step-no strong{font-size:30px;display:inline}
+  .step-no span{display:inline;margin:0}
+  .row{grid-template-columns:84px 1fr;gap:10px}
+  .perk p br{display:none}
+}
+@media (prefers-reduced-motion:no-preference){
+  .jumper{animation:hop 3.6s ease-in-out infinite}
+  @keyframes hop{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <span class="eyebrow">광주 청년 취업 프로젝트</span>
+    <div class="rule" aria-hidden="true"></div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">문송하지만,</p>
+    <h1>이번 겨울<br><span class="hl">취업은</span> 하고 싶어!</h1>
+    <span class="pill">광주 지역 취업에 진심인 청년을 찾습니다</span>
+    <img class="jumper" src="images/jumper.jpg" alt="목도리를 휘날리며 힘차게 점프하는 청년 일러스트" width="704" height="472">
+  </div>
+  <img class="roofs" src="images/roofs.jpg" alt="" width="1000" height="272">
+</section>
+
+<section class="lead">
+  <div class="wrap">
+    <h2><em>취업에 진심인 5명</em>을 찾습니다.</h2>
+    <p>어떤 기업에 지원해야 할지 고민인가요? 나에게 맞는 기업을 찾고, 이력서·자소서 준비부터 실제 채용 지원까지 함께해요.</p>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"></div>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="sec-title"><small>WHO</small>이런 청년을 기다려요</h2>
+    <ul class="who">
+      <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="#54817a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>광주에서 취업하고 싶은</b> 인문계열 대학 졸업생</span></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="#54817a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>어떤 기업과 직무</b>에 지원해야 할지 고민하는 청년</span></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="#54817a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>이력서·자소서 작성</b>이나 실제 채용 지원에 도움이 필요한 청년</span></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="#54817a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>이번 겨울, <b>새로운 취업 기회</b>에 도전하고 싶은 청년</span></li>
+    </ul>
+  </div>
+</section>
+
+<div class="wrap dark-rule"><div class="rule" aria-hidden="true"></div></div>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="sec-title"><small>PROCESS</small>이렇게 진행돼요</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-no">STEP<strong>1</strong><span>누구나 참여</span></div>
+        <div>
+          <h3>취업 준비 현황 설문</h3>
+          <ul><li>나의 취업 고민과 준비 상황을 나누는 온라인 설문</li></ul>
+          <span class="reward">추첨 50명 · 5천 원 상당 기프티콘</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-no">STEP<strong>2</strong><span>20명 선정</span></div>
+        <div>
+          <h3>취업 고민 인터뷰</h3>
+          <ul><li>나의 취업 고민과 희망 조건 확인</li><li>광주 지역기업 및 채용정보 탐색</li></ul>
+          <span class="reward">인터뷰 사례비 별도 지급</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-no">STEP<strong>3</strong><span>최종 5명</span></div>
+        <div>
+          <h3>실전 취업 지원</h3>
+          <ul><li>나에게 맞는 기업과 직무 탐색</li><li>이력서·자소서 코칭</li><li>실제 지역기업 채용 지원</li></ul>
+          <span class="reward">목표 달성 시 지원금 30만 원</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"></div>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="sec-title"><small>BENEFITS</small>이런 혜택이 있어요</h2>
+    <div class="perks">
+      <div class="perk">
+        <div class="ic"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="14" width="12" height="20" rx="1.5" fill="#54817a"/><rect x="20" y="7" width="15" height="27" rx="1.5" fill="#2e4c47"/><g fill="#f3cd5d"><rect x="8" y="18" width="3" height="3"/><rect x="8" y="24" width="3" height="3"/><rect x="24" y="12" width="3" height="3"/><rect x="29" y="12" width="3" height="3"/><rect x="24" y="18" width="3" height="3"/><rect x="29" y="18" width="3" height="3"/><rect x="24" y="24" width="3" height="3"/><rect x="29" y="24" width="3" height="3"/></g></svg></div>
+        <h3>지역기업 탐색</h3>
+        <p>잘 몰랐던 광주 지역기업과<br>채용 기회를 알아봐요.</p>
+      </div>
+      <div class="perk">
+        <div class="ic"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect x="8" y="5" width="22" height="29" rx="2" fill="#fffdf8" stroke="#2e4c47" stroke-width="2.4"/><path d="M13 13h12M13 18h12M13 23h7" stroke="#54817a" stroke-width="2.4" stroke-linecap="round"/><path d="M22 31l9-9 3.5 3.5-9 9H22z" fill="#f3cd5d" stroke="#2e4c47" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <h3>실전 취업 코칭</h3>
+        <p>최종 5명에게 이력서·자소서<br>피드백과 채용 지원을 도와드려요.</p>
+      </div>
+      <div class="perk">
+        <div class="ic"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14" fill="#f3cd5d" stroke="#2e4c47" stroke-width="2.4"/><text x="20" y="25.5" text-anchor="middle" font-family="Pretendard, sans-serif" font-weight="700" font-size="14" fill="#2e4c47">₩</text></svg></div>
+        <h3>취업 지원금</h3>
+        <p><span class="big">30만 원</span><br>최종 5명, 목표 달성 시 지원해요.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap dark-rule"><div class="rule" aria-hidden="true"></div></div>
+
+<section class="block" id="apply">
+  <div class="wrap">
+    <h2 class="sec-title"><small>APPLY</small>지원하기</h2>
+    <dl class="rows">
+      <div class="row"><dt>모집 대상</dt><dd>광주 지역 대학 <strong>인문·사회계열 졸업자</strong> 중 미취업 청년</dd></div>
+      <div class="row"><dt>모집 기간</dt><dd><strong>2026. 11. 16.(월) ~ 12. 4.(금)</strong></dd></div>
+      <div class="row"><dt>신청 방법</dt><dd>온라인 설문 작성</dd></div>
+      <div class="row"><dt>운영</dt><dd>행복나눔재단 청년사업팀</dd></div>
+      <div class="row"><dt>문의</dt><dd>송진리 매니저<br><span id="tel">070-7601-7156</span><button class="copy" type="button" data-copy="070-7601-7156">복사</button><br><span id="mail">truthsong@skhappiness.org</span><button class="copy" type="button" data-copy="truthsong@skhappiness.org">복사</button></dd></div>
+    </dl>
+    <p class="note">※ 설문 참여자 중 인터뷰 대상 20명을 선정하고, 최종 5명을 실전 취업 지원 대상으로 선발합니다. 취업 지원금은 성과 달성 조건에 따라 지급됩니다.</p>
+    <div class="cta-box">
+      <a class="cta" href="#apply" aria-disabled="true">온라인 설문으로 신청하기</a>
+      <span class="cta-sub">신청 링크는 모집 시작 전에 열려요</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>행복나눔재단 청년사업팀</b><span class="sep">|</span>문의 송진리 매니저 070-7601-7156<br>
+    truthsong@skhappiness.org
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var t=btn.getAttribute('data-copy');
+    var done=function(){btn.textContent='복사됨';setTimeout(function(){btn.textContent='복사'},1500)};
+    try{navigator.clipboard.writeText(t).then(done,function(){sel(btn)})}catch(e){sel(btn)}
+  });
+});
+function sel(btn){var r=document.createRange();r.selectNodeContents(btn.previousElementSibling);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+document.querySelector('.cta').addEventListener('click',function(e){e.preventDefault()});
+</script>
+</body>
+</html>
